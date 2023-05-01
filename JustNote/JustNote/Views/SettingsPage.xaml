@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:JustNote.ViewModels"
+             x:Class="JustNote.SettingsPage"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:SettingsPageViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="Dark/Light theme" TextColor="Black"/>
+            <Switch Grid.Column="1"/>
+
+            <Label Text="Clear All data" Grid.Row="1" TextColor="Black"/>
+            <Button Text="Clear" Grid.Column="1" Grid.Row="1"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
